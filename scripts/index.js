@@ -2,7 +2,7 @@
 //and use it among the execution
 var age;
 var gender;
-var nationality;
+var nationalities = [];
 const picture = document.getElementById("picture");
 const dogName = document.getElementById("dog-name");
 const predict = document.getElementById("predict");
@@ -46,9 +46,7 @@ predict.onclick = () => {
   generate_story(name);
 };
 
-//this function will generate the biography of the dog
-//by calling three apis age , gender and, nationality
-async function generate_story(name) {
+async function get_age(name) {
   // age api
   await fetch("https://api.agify.io/?name=" + name)
     .then((res) => res.text())
@@ -58,7 +56,9 @@ async function generate_story(name) {
       age = data_obj.age;
       console.log(data_obj);
     });
-  //gender api
+}
+async function get_gender(name) {
+  // gender api
   await fetch("https://api.genderize.io/?name=" + name)
     .then((res) => res.text())
     .then((data) => {
@@ -67,4 +67,31 @@ async function generate_story(name) {
       gender = data_obj.gender;
       console.log(data_obj);
     });
+}
+async function get_nationalities(name) {
+  // age api
+  await fetch("https://api.nationalize.io/?name=" + name)
+    .then((res) => res.text())
+    .then((data) => {
+      let data_obj = {};
+      data_obj = JSON.parse(data);
+      for (let index = 0; index < data_obj.country.length; index++) {
+        const element = data_obj.country[index];
+        nationalities[index] = element.country_id;
+        console.log(element.country_id);
+      }
+    });
+}
+
+//this function will generate the biography of the dog
+//by calling three apis age , gender and, nationality
+function generate_story(name) {
+  //get the age by age api
+  get_age(name);
+
+  //get the gender by gender api
+  get_gender(name);
+
+  //get nationalities by nationalities api
+  get_nationalities(name);
 }
