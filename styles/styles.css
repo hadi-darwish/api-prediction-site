@@ -1,0 +1,106 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  background-image: url("../images/dog.webp");
+  background-size: cover;
+  height: 100%;
+  background-repeat: repeat-y;
+  color: black;
+}
+
+/* Start Utilities */
+.container {
+  margin: 1vw auto 1vw 2vw;
+}
+
+.components {
+  height: 50px;
+  font-size: larger;
+  border-radius: 11px;
+  border-style: none;
+  color: white;
+  margin: 15px;
+}
+/* End Utilities */
+
+/* Start Dog picture section */
+.dog-pic {
+  height: 40vw;
+  width: 40vw;
+  max-width: 500px;
+  max-height: 500px;
+  min-height: 300px;
+  min-width: 300px;
+  border: solid 5px;
+  border-color: #06a753;
+}
+
+.dog-pic > img {
+  height: 100%;
+  width: 100%;
+}
+
+/* End Dog picture section */
+
+/* Start Input section */
+.name {
+}
+.name > h1 {
+  margin-left: 15px;
+  margin-bottom: 20px;
+}
+.name > h3 {
+  color: red;
+  margin-left: 15px;
+}
+.name > input {
+  width: 250px;
+  padding-left: 10px;
+  background-color: #06a753;
+}
+.name > button {
+  color: white;
+  width: 100px;
+  margin-left: 25px;
+  background-color: black;
+}
+::placeholder {
+  color: white;
+  opacity: 0.5;
+  font-size: larger;
+}
+/* End  Input section */
+
+/* Start Story Section */
+.story {
+  line-height: 50px;
+}
+.story ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.story li {
+  padding-left: 1rem;
+  text-indent: -0.7rem;
+}
+.story li::before {
+  content: "📌 ";
+}
+/* End Story Section */
+
+@media only screen and (max-width: 700px) {
+  body {
+    flex-direction: column;
+  }
+  .dog-pic,
+  .story {
+    margin: 3vw auto;
+  }
+}
