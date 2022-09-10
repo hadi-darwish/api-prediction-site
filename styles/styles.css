@@ -3,10 +3,23 @@
   padding: 0;
   box-sizing: border-box;
 }
+/* Start Utilities */
+.container {
+  margin: 3vw auto 3vw 2vw;
+}
+
+.components {
+  height: 50px;
+  font-size: larger;
+  border-radius: 11px;
+  border-style: none;
+  color: white;
+  margin: 15px;
+}
+/* End Utilities */
 
 /* Start Dog picture section */
 .dog-pic {
-  margin: 3vw auto 3vw 2vw;
   height: 40vw;
   width: 40vw;
   max-width: 500px;
@@ -22,6 +35,31 @@
 }
 
 /* End Dog picture section */
+
+/* Start Input section */
+.name {
+  /* background-color: red; */
+}
+.name > h1 {
+  margin-left: 15px;
+  margin-bottom: 20px;
+}
+.name > input {
+  width: 250px;
+  padding-left: 10px;
+  background-color: teal;
+}
+.name > button {
+  width: 100px;
+  margin-left: 25px;
+  background-color: #a71f6e;
+}
+::placeholder {
+  color: white;
+  opacity: 0.5;
+  font-size: larger;
+}
+/* End  Input section */
 
 @media only screen and (max-width: 600px) {
   .dog-pic {
