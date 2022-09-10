@@ -120,7 +120,7 @@ async function generate_story(name) {
   //adding text and html for targeted elements to create story of the dog
   display_name.innerHTML = `🐶Woof🐶<br> Hello My name is <i>${name}</i> !`;
   display_age_gender.innerHTML = `I am a  <i>${age}</i> years old  <i>${gender} !</i> `;
-  find.innerHTML = `You can find me in 🗺️`;
+  find.innerHTML = `I love Dogs and taking them to a walk🐕‍🦺🐕<br>My nationalities are 🗺️`;
   for (let index = 0; index < nationalities.length; index++) {
     display_nationalities.insertAdjacentHTML(
       "afterbegin",
