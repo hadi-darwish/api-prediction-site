@@ -44,6 +44,10 @@
   margin-left: 15px;
   margin-bottom: 20px;
 }
+.name > h3 {
+  margin-left: 15px;
+  color: red;
+}
 .name > input {
   width: 250px;
   padding-left: 10px;
