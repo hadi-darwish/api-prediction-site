@@ -1,0 +1,30 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Start Dog picture section */
+.dog-pic {
+  margin: 3vw auto 3vw 2vw;
+  height: 40vw;
+  width: 40vw;
+  max-width: 500px;
+  max-height: 500px;
+  min-height: 300px;
+  min-width: 300px;
+  border: solid 5px;
+}
+
+.dog-pic > img {
+  height: 100%;
+  width: 100%;
+}
+
+/* End Dog picture section */
+
+@media only screen and (max-width: 600px) {
+  .dog-pic {
+    margin: 3vw auto;
+  }
+}
