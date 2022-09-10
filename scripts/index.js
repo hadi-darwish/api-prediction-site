@@ -58,4 +58,13 @@ async function generate_story(name) {
       age = data_obj.age;
       console.log(data_obj);
     });
+  //gender api
+  await fetch("https://api.genderize.io/?name=" + name)
+    .then((res) => res.text())
+    .then((data) => {
+      let data_obj = {};
+      data_obj = JSON.parse(data);
+      gender = data_obj.gender;
+      console.log(data_obj);
+    });
 }
